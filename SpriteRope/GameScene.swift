@@ -9,33 +9,26 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    var rope: RMSpriteRope!
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
-        self.addChild(myLabel)
+        self.anchorPoint = CGPoint(x: 0.5, y: 0.5)
+        let attachmentNode = SKSpriteNode(color: UIColor.greenColor(), size: CGSize(width: 20, height: 20))
+        attachmentNode.physicsBody = SKPhysicsBody(rectangleOfSize: attachmentNode.size)
+        attachmentNode.physicsBody?.affectedByGravity = false
+        attachmentNode.physicsBody?.dynamic = false
+        
+        addChild(attachmentNode)
+        
+        rope = RMSpriteRope(withLength: 20, andNodeTexture: SKTexture(imageNamed: "rope_node"))
+        rope.attachToNode(attachmentNode)
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
-       /* Called when a touch begins */
-        
-        for touch in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
+        if let tail = rope.tailNode{
+            tail.physicsBody?.applyImpulse(CGVector(dx: 50, dy: 0), atPoint: CGPoint(x: CGRectGetMidX(tail.frame), y: CGRectGetMinY(tail.frame)))
         }
     }
    

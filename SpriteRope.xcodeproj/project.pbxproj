@@ -14,6 +14,8 @@
 		1600C49F1C6E6995009D764F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1600C49D1C6E6995009D764F /* Main.storyboard */; };
 		1600C4A11C6E6995009D764F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1600C4A01C6E6995009D764F /* Assets.xcassets */; };
 		1600C4A41C6E6995009D764F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1600C4A21C6E6995009D764F /* LaunchScreen.storyboard */; };
+		1600C4AC1C6E7D44009D764F /* RMSpriteRope.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1600C4AB1C6E7D44009D764F /* RMSpriteRope.swift */; };
+		1600C4AE1C6E7D54009D764F /* RMRopeNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1600C4AD1C6E7D54009D764F /* RMRopeNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,8 @@
 		1600C4A01C6E6995009D764F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1600C4A31C6E6995009D764F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1600C4A51C6E6995009D764F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1600C4AB1C6E7D44009D764F /* RMSpriteRope.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMSpriteRope.swift; sourceTree = "<group>"; };
+		1600C4AD1C6E7D54009D764F /* RMRopeNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RMRopeNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +70,8 @@
 				1600C4A01C6E6995009D764F /* Assets.xcassets */,
 				1600C4A21C6E6995009D764F /* LaunchScreen.storyboard */,
 				1600C4A51C6E6995009D764F /* Info.plist */,
+				1600C4AB1C6E7D44009D764F /* RMSpriteRope.swift */,
+				1600C4AD1C6E7D54009D764F /* RMRopeNode.swift */,
 			);
 			path = SpriteRope;
 			sourceTree = "<group>";
@@ -143,6 +149,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1600C49A1C6E6995009D764F /* GameScene.swift in Sources */,
+				1600C4AE1C6E7D54009D764F /* RMRopeNode.swift in Sources */,
+				1600C4AC1C6E7D44009D764F /* RMSpriteRope.swift in Sources */,
 				1600C49C1C6E6995009D764F /* GameViewController.swift in Sources */,
 				1600C4961C6E6995009D764F /* AppDelegate.swift in Sources */,
 			);
